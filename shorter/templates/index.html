@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shorter</title>
+</head>
+<body>
+{{if .Status}}
+{{.Status}}
+{{end}}
+{{if .Url}}
+Сокращенная ссылка ({{.Url}}) <input maxLength=255 type="url" value="http://localhost:8181/{{.Key}}">
+{{else}}
+<br>
+<form action="/" name=f method="POST">
+<input maxLength=1024 size=70 name=url value="" title="Url">
+<input type=submit value="Сократить" name=qr>
+</form>
+<br>
+{{end}}
+</body>
+</html>
